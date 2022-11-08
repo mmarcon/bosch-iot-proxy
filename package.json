@@ -18,6 +18,6 @@
   "homepage": "https://github.com/mmarcon/bosch-iot-proxy#readme",
   "dependencies": {
     "mongodb": "^4.11.0",
-    "node-fetch": "^3.2.10"
+    "node-fetch": "^2.6.7"
   }
 }
