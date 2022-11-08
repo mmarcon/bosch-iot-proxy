@@ -8,7 +8,7 @@ const clientPromise = client.connect();
 export default async function handler(req, res) {
   client = await clientPromise;
   const collection = client.db('Building').collection('clients');
-  const client = await collection.findOne({name: 'myclient1'});
+  const clientInfo = await collection.findOne({name: 'myclient1'});
   try {
     
   }
@@ -16,5 +16,5 @@ export default async function handler(req, res) {
     console.error(e);
   }
 
-  res.send(`Hello ${client.name}`);
+  res.send(`Hello ${clientInfo.name}`);
 };
