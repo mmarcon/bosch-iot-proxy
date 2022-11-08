@@ -12,8 +12,8 @@ export default async function handler(req, res) {
 
   const httpsAgent = new https.Agent({
     rejectUnauthorized: false,
-    cert: clientInfo.cert,
-    key: clientInfo.key});
+    cert: clientInfo.cert.value(),
+    key: clientInfo.key}).value();
 
   const raw = JSON.stringify({
     "@type": "powerSwitchState",
